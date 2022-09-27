@@ -5,37 +5,37 @@ Faça um Programa que leia 2 números e em seguida pergunte ao usuário qual ope
 - inteiro ou decimal.
 */
 
-function verificaNum(n1,n2,op){
+function verificaNum(n1, n2, op) {
     var resultado
-    if(op == '+')
+    if (op == '+')
         resultado = n1 + n2
-    if(op == '-')
+    if (op == '-')
         resultado = n1 - n2
-    if(op == '/')
+    if (op == '/')
         resultado = n1 / n2
-    if(op == '*')
+    if (op == '*')
         resultado = n1 * n2
 
-    console.log("Resultado =",resultado,)
+    console.log("Resultado =", resultado,)
     console.log("Este numero é:")
-    
-    if(resultado%2==0){
+
+    if (resultado % 2 == 0) {
         console.log("- Par.")
-    }else{
+    } else {
         console.log("- Impar.")
     }
 
-    if(resultado>=0){
+    if (resultado >= 0) {
         console.log("- Positivo")
-    }else{
+    } else {
         console.log("- Negativo")
     }
 
-    if(resultado%1==0){
+    if (resultado % 1 == 0) {
         console.log("- Inteiro!")
-    }else{
+    } else {
         console.log("- Decimal!")
     }
 }
 
-verificaNum(2,5.5,'*')
+verificaNum(2, 5.5, '*')
