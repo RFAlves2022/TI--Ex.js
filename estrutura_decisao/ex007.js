@@ -6,29 +6,30 @@ Gasolina:
 até 20 litros, desconto de 4% por litro
 acima de 20 litros, desconto de 6% por litro 
     Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 2,50 o preço do litro do álcool é R$ 1,90. */
+function descontoCombustivel() {
+    let litros = document.querySelector("#qtdLitros").value
+    //, tipo = "A", valor, pInicial
 
-let  litros=14, tipo="A", valor, pInicial
+    switch (tipo) {
+        case "A":
+            pInicial = 1.9
 
-switch (tipo) {
-    case "A":
-        pInicial = 1.9
+            if (litros <= 20) {
+                valor = ((pInicial * 0.03) + pInicial) * litros
+            } else {
+                valor = ((pInicial * 0.05) + pInicial) * litros
+            }
+            break;
 
-        if(litros<=20){
-            valor = ((pInicial*0.03)+pInicial)*litros  
-        }else{
-        valor = ((pInicial*0.05)+pInicial)*litros
-        }
-        break;
+        case "G":
+            pInicial = 2.5
 
-    case "G":
-        pInicial = 2.5
-
-        if(litros<=20){
-            valor = ((pInicial*0.04)+pInicial)*litros  
-        }else{
-        valor = ((pInicial*0.06)+pInicial)*litros
-        }
-        break;
+            if (litros <= 20) {
+                valor = ((pInicial * 0.04) + pInicial) * litros
+            } else {
+                valor = ((pInicial * 0.06) + pInicial) * litros
+            }
+            break;
+    }
 }
-
 
