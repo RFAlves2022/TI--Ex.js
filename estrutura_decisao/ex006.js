@@ -5,37 +5,47 @@ Faça um Programa que leia 2 números e em seguida pergunte ao usuário qual ope
 - inteiro ou decimal.
 */
 
-function verificaNum(n1, n2, op) {
-    var resultado
-    if (op == '+')
-        resultado = n1 + n2
-    if (op == '-')
-        resultado = n1 - n2
-    if (op == '/')
-        resultado = n1 / n2
-    if (op == '*')
-        resultado = n1 * n2
+function verificaNum() {
+    let n1 = document.querySelector("#n1").value
+    let n2 = document.querySelector("#n2").value
+    let select = document.querySelector("#operacao")
+    let op = select.options[select.selectedIndex].value
+    let resultado, parImpar, posNeg, intDec
 
-    console.log("Resultado =", resultado,)
-    console.log("Este numero é:")
+    switch (op) {
+        case "selecione":
+            alert("Selecione uma operação!")
+            break;
+        case "+":
+            resultado = parseFloat(n1) + parseFloat(n2)
+            break;
+        case "-":
+            resultado = n1 - n2
+            break;
+        case "/":
+            resultado = n1 / n2
+            break;
+        case "*":
+            resultado = n1 * n2
+            break;
+    }
 
     if (resultado % 2 == 0) {
-        console.log("- Par.")
+        parImpar = "Par"
     } else {
-        console.log("- Impar.")
+        parImpar = "Impar"
     }
 
     if (resultado >= 0) {
-        console.log("- Positivo")
+        posNeg = "Positivo"
     } else {
-        console.log("- Negativo")
+        posNeg = "Negativo"
     }
 
     if (resultado % 1 == 0) {
-        console.log("- Inteiro!")
+        intDec = "Inteiro"
     } else {
-        console.log("- Decimal!")
+        intDec = "Decimal"
     }
+    document.querySelector("#resultado").innerHTML = `<strong>Resultado: ${resultado.toFixed(2)}<br>Este número é:<br>${parImpar}<br>${posNeg}<br>${intDec}</strong>`
 }
-
-verificaNum(2, 5.5, '*')
