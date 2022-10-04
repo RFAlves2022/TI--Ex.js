@@ -1,5 +1,11 @@
 //Faça um Programa que peça as 4 notas bimestrais e mostre a média.
 
-let n1=6,n2=8,n3=7,n4=10
-let media = (n1+n2+n3+n4)/4
-console.log("Sua média é: ",media)
+function calculaMedia(){
+    console.log("aaaaa")
+    let n1 = document.querySelector("#n1").value
+    let n2 = document.querySelector("#n2").value
+    let n3 = document.querySelector("#n3").value
+    let n4 = document.querySelector("#n4").value
+    let media = (n1+n2+n3+n3)/4
+    document.querySelector("#resultado").innerHTML = `<strong>A sua média é: ${media} </strong>`
+}

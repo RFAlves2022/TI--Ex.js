@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.site {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.painel-imagem{
+    background-image: url(imagens/fundo.png);
+    background-position: center;
+    background-size: cover;
+}
+.conjunto-pokemon{
+    text-align: center;
+    width: 250px;
+}
+
+#pokemon-imagem{
+    filter: brightness(0);
+}
+
+.alternativas button{
+    display: block;
+}
